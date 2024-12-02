@@ -24,9 +24,6 @@ public interface ZstdCompressor
 
     static ZstdCompressor create()
     {
-        if (ZstdNativeCompressor.isEnabled()) {
-            return new ZstdNativeCompressor();
-        }
         return new ZstdJavaCompressor();
     }
 }
